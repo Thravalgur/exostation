@@ -1,0 +1,5 @@
+author: "Thravalgur"
+delete-after: True
+changes:
+  - rscadd: "Canal Local OOC"
+  - admin: "Préférence admin pour voir le canal LOOC"
