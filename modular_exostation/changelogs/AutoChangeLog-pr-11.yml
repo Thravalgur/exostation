@@ -1,0 +1,4 @@
+author: "Thravalgur"
+delete-after: True
+changes:
+  - bugfix: "Remplacement temporaire de la taille des icônes de screentips, pour ne pas devoir les désactiver. Peut mal ressortir dans certaines versions antérieures de BYOND (à partir de la version 516.1657)"
