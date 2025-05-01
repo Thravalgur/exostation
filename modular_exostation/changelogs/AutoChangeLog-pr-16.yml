@@ -1,0 +1,4 @@
+author: "Thravalgur"
+delete-after: True
+changes:
+  - bugfix: "Maj+C pour changer de mode de déplacement (courir/marcher)"
