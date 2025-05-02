@@ -1,0 +1,13 @@
+2025-05-02:
+  Thravalgur:
+  - rscadd: Canal Local OOC
+  - admin: Préférence admin pour voir le canal LOOC
+  - server: Personnalisation, paramétrage de la database et de la whitelist
+  - config: Configuration de base du serveur Exostation (sujette à changements ultérieurs)
+  - qol: Raccourcis claviers azerty
+  - rscadd: Changelogs séparés
+  - spellcheck: Traduction des niveaux d'alertes (config) et des raccourcis claviers
+  - bugfix: Remplacement temporaire de la taille des icônes de screentips, pour ne
+      pas devoir les désactiver. Peut mal ressortir dans certaines versions antérieures
+      de BYOND (à partir de la version 516.1657)
+  - bugfix: Maj+C pour changer de mode de déplacement (courir/marcher)

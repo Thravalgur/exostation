@@ -1,8 +1,0 @@
-author: "Thravalgur"
-delete-after: True
-changes:
-  - server: "Personnalisation, paramétrage de la database et de la whitelist"
-  - config: "Configuration de base du serveur Exostation (sujette à changements ultérieurs)"
-  - qol: "Raccourcis claviers azerty"
-  - rscadd: "Changelogs séparés"
-  - spellcheck: "Traduction des niveaux d'alertes (config) et des raccourcis claviers"
