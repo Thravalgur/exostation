@@ -1,0 +1,5 @@
+author: "Thravalgur"
+delete-after: True
+changes:
+  - rscadd: "Ajout d'un canal Whisper pour chuchoter sans formatage de texte."
+  - qol: "Le canal Whisper fait partie des canaux qu'on peut faire défiler avec Tab."
