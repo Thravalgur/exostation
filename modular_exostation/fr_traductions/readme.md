@@ -14,6 +14,7 @@ Module ID: <!-- Nom de votre module en majuscules, sans espaces mais avec un tir
 
 - `code/_globalvars/lists/flavor_misc.dm` : liens vers strings & quelques variables
 - `code/_globalvars/lists/quirks.dm` : variables
+- `code/controllers/subsystem/ticker.dm` : liens vers strings des tips
 
 ### Overrides modulaires :
 
