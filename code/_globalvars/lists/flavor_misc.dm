@@ -206,19 +206,19 @@ GLOBAL_LIST_INIT(TAGGERLOCATIONS, list("Disposals",
 	"Experimentor Lab", "Ordnance", "Dormitories", "Virology",
 	"Xenobiology", "Law Office","Detective's Office"))
 
-GLOBAL_LIST_INIT(station_prefixes, world.file2list("strings/station_prefixes.txt"))
+GLOBAL_LIST_INIT(station_prefixes, world.file2list("modular_exostation/fr_traductions/strings/station_prefixes.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
-GLOBAL_LIST_INIT(station_names, world.file2list("strings/station_names.txt"))
+GLOBAL_LIST_INIT(station_names, world.file2list("modular_exostation/fr_traductions/strings/station_names.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
-GLOBAL_LIST_INIT(station_suffixes, world.file2list("strings/station_suffixes.txt"))
+GLOBAL_LIST_INIT(station_suffixes, world.file2list("modular_exostation/fr_traductions/strings/station_suffixes.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
-GLOBAL_LIST_INIT(greek_letters, world.file2list("strings/greek_letters.txt"))
+GLOBAL_LIST_INIT(greek_letters, world.file2list("modular_exostation/fr_traductions/strings/greek_letters.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
-GLOBAL_LIST_INIT(phonetic_alphabet, world.file2list("strings/phonetic_alphabet.txt"))
+GLOBAL_LIST_INIT(phonetic_alphabet, world.file2list("modular_exostation/fr_traductions/strings/phonetic_alphabet.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
-GLOBAL_LIST_INIT(numbers_as_words, world.file2list("strings/numbers_as_words.txt"))
+GLOBAL_LIST_INIT(numbers_as_words, world.file2list("modular_exostation/fr_traductions/strings/numbers_as_words.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
-GLOBAL_LIST_INIT(wisdoms, world.file2list("strings/wisdoms.txt"))
+GLOBAL_LIST_INIT(wisdoms, world.file2list("modular_exostation/fr_traductions/strings/wisdoms.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
 /proc/generate_number_strings()
 	var/list/L[198]
@@ -243,7 +243,7 @@ GLOBAL_LIST_INIT(admiral_messages, list(
 	"You knew the risks coming in.",
 ))
 
-GLOBAL_LIST_INIT(junkmail_messages, world.file2list("strings/junkmail.txt"))
+GLOBAL_LIST_INIT(junkmail_messages, world.file2list("modular_exostation/fr_traductions/strings/junkmail.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
 // All valid inputs to status display post_status
 GLOBAL_LIST_INIT(status_display_approved_pictures, list(
@@ -266,7 +266,7 @@ GLOBAL_LIST_INIT(status_display_state_pictures, list(
 	"shuttle",
 ))
 
-GLOBAL_LIST_INIT(fishing_tips, world.file2list("strings/fishing_tips.txt"))
+GLOBAL_LIST_INIT(fishing_tips, world.file2list("modular_exostation/fr_traductions/strings/fishing_tips.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
 /// 1000 element long list containing the 1000 most common words in the English language.
 /// Indexed by word, value is the rank of the word in the list. So accessing it is fasta.
@@ -275,6 +275,6 @@ GLOBAL_LIST_INIT(most_common_words, init_common_words())
 /proc/init_common_words()
 	. = list()
 	var/i = 1
-	for(var/word in world.file2list("strings/1000_most_common.txt"))
+	for(var/word in world.file2list("modular_exostation/fr_traductions/strings/1000_most_common.txt")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 		.[word] = i
 		i += 1
