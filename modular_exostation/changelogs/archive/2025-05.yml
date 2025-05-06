@@ -15,3 +15,8 @@
   Thravalgur:
   - rscadd: Ajout d'un canal Whisper pour chuchoter sans formatage de texte.
   - qol: Le canal Whisper fait partie des canaux qu'on peut faire défiler avec Tab.
+2025-05-06:
+  Thravalgur:
+  - rscadd: Ajout des holomaps, image holographique de la station affichable grâce
+      au PDA. (Adaptation de NSV13)
+  - qol: Les holomaps indiquent les escaliers, les ascenseurs et les échelles.
