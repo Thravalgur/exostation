@@ -12,7 +12,8 @@ Module ID: <!-- Nom de votre module en majuscules, sans espaces mais avec un tir
 
 ### Procs ou fichiers de TG changés :
 
-- `code/_globalvars/lists/flavor_misc.dm` : liens vers strings
+- `code/_globalvars/lists/flavor_misc.dm` : liens vers strings & quelques variables
+- `code/_globalvars/lists/quirks.dm` : variables
 
 ### Overrides modulaires :
 
