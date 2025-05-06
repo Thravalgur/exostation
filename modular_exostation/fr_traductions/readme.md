@@ -17,6 +17,8 @@ Module ID: <!-- Nom de votre module en majuscules, sans espaces mais avec un tir
 - `code/controllers/subsystem/ticker.dm` : liens vers strings des tips, quelques traductions
 - `code/__HELPERS/names.dm` : modifier les liens des fichiers et quelques traductions
 - `code/__DEFINES/text.dm` : modifier les liens des fichiers
+
+### Modifications envisagées ultérieurement : 
 - `code/modules/hallucination/fake_message.dm` : traductions d'hallucinations non-auditives à faire plus tard
 
 ### Overrides modulaires :
