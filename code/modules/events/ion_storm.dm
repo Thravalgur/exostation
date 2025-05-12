@@ -27,7 +27,7 @@
 
 /datum/round_event/ion_storm/announce(fake)
 	if(prob(announce_chance) || fake)
-		priority_announce("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert", ANNOUNCER_IONSTORM)
+		priority_announce("Une tempête ionique a été détectée dans le périmètre de la station. Merci de vérifier tous les équipements sous contrôle de l'IA en cas d'éventuelles erreurs.", "Anomaly Alert", ANNOUNCER_IONSTORM) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
 
 /datum/round_event/ion_storm/start()
@@ -120,50 +120,50 @@
 		if(1 to 3) //There are # X on the station
 			switch(rand(1,3)) //What is X?
 				if(1) //X is a threat
-					message = "THERE ARE [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats] ON THE STATION..."
+					message = "IL Y A [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats] SUR LA STATION..." // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(2) //X is a crewmember/job
-					message = "THERE ARE [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1] ON THE STATION"
+					message = "IL Y A [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1] SUR LA STATION." // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(3) //X is an object
-					message = "THERE ARE [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects] ON THE STATION"
+					message = "IL Y A [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects] SUR LA STATION." // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 		if(4 to 6) //You can't call the shuttle because X is on the station
 			switch(rand(1,3)) //What is X?
 				if(1) //X is a threat
-					message = "THE SHUTTLE CANNOT BE CALLED BECAUSE OF [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats] ON THE STATION"
+					message = "LA NAVETTE NE PEUT PAS ÊTRE APPELÉE À CAUSE DE [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats] SUR LA STATION." // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(2) //X is a crewmember/job
-					message = "THE SHUTTLE CANNOT BE CALLED BECAUSE OF [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1] ON THE STATION"
+					message = "LA NAVETTE NE PEUT PAS ÊTRE APPELÉE À CAUSE DE [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1] SUR LA STATION." // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(3) //X is an object
-					message = "THE SHUTTLE CANNOT BE CALLED BECAUSE OF [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects] ON THE STATION"
+					message = "LA NAVETTE NE PEUT PAS ÊTRE APPELÉE À CAUSE DE [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects] SUR LA STATION." // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 		if(7 to 8) //A crewmember is now X
 			switch(rand(1,2)) //Who is X?
 				if(1) //A specific crewmember
 					switch(rand(1,2)) //What is X?
 						if(1) //X is a threat
-							message = "THE [ioncrew1] ARE NOW [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"
+							message = "LES [ioncrew1] SONT MAINTENANT [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 						if(2) //X is an object
-							message = "THE [ioncrew1] ARE NOW [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"
+							message = "LES [ioncrew1] SONT MAINTENANT [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(2) //The entire crew
 					switch(rand(1,2)) //What is X?
 						if(1) //X is a threat
-							message = "THE CREW ARE NOW [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"
+							message = "TOUT L'ÉQUIPAGE EST MAINTENANT [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats]"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 						if(2) //X is an object
-							message = "THE CREW ARE NOW [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"
+							message = "TOUT L'ÉQUIPAGE EST MAINTENANT [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects]"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 
 		if(9) //X is harmful to humans
 			switch(rand(1,7)) //What is X?
 				if(1) //X is a threat
-					message = "[ionadjectiveshalf][ionthreats] ARE HARMFUL TO HUMANS"
+					message = "[ionadjectiveshalf][ionthreats] SONT SOURCES DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(2) //X is a job
-					message = "[ionadjectiveshalf][ioncrew1] ARE HARMFUL TO HUMANS"
+					message = "[ionadjectiveshalf][ioncrew1] SONT SOURCES DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(3) //X is an object
-					message = "[ionadjectiveshalf][ionobjects] ARE HARMFUL TO HUMANS"
+					message = "[ionadjectiveshalf][ionobjects] SONT SOURCES DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(4) //X is an action
-					message = "THOSE WHO [ionmust] ARE HARMFUL TO HUMANS"
+					message = "TOUS CEUX QUI [ionmust] SONT SOURCES DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(5) //X is an abstract
-					message = "[ionabstract] IS HARMFUL TO HUMANS"
+					message = "[ionabstract] EST SOURCE DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(6) //X is being a job
-					message = "BEING [ionadjectiveshalf][ioncrew1] IS HARMFUL TO HUMANS"
+					message = "ÊTRE [ionadjectiveshalf][ioncrew1] EST SOURCE DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 				if(7) //X is doing a thing
-					message = "[ionthings] IS HARMFUL TO HUMANS"
+					message = "[ionthings] EST SOURCE DE DANGER POUR LES HUMAINS ET POUR L'ÉQUIPAGE"  // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 		if(10 to 11) //(Not) Having X is harmful
 
 			switch(rand(1,2)) //Is having or not having harmful?
