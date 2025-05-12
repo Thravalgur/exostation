@@ -160,7 +160,7 @@ SUBSYSTEM_DEF(ticker)
 				window_flash(C, ignorepref = TRUE) //let them know lobby has opened up.
 			to_chat(world, span_notice("<b>Welcome to [station_name()]!</b>"))
 			for(var/channel_tag in CONFIG_GET(str_list/channel_announce_new_game))
-				send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.current_map.map_name]!"), channel_tag)
+				send2chat(new /datum/tgs_message_content("Une nouvelle partie commence sur [SSmapping.current_map.map_name]!"), channel_tag) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 			current_state = GAME_STATE_PREGAME
 			SEND_SIGNAL(src, COMSIG_TICKER_ENTER_PREGAME)
 
@@ -229,7 +229,7 @@ SUBSYSTEM_DEF(ticker)
 	return FALSE
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, span_boldannounce("Starting game..."))
+	to_chat(world, span_boldannounce("Démarrage du jeu...")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 	var/init_start = world.timeofday
 
 	CHECK_TICK
@@ -307,7 +307,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
-	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]" : ""] has started[allmins.len ? ".":" with no active admins online!"]")
+	send2adminchat("Server", "La partie [GLOB.round_id ? "#[GLOB.round_id]" : ""] a commencé[allmins.len ? ".":" sans admin valide en ligne !"]") // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 	setup_done = TRUE
 
 	for(var/i in GLOB.start_landmarks_list)
@@ -433,7 +433,10 @@ SUBSYSTEM_DEF(ticker)
 		for(var/mob/dead/new_player/new_player_mob as anything in GLOB.new_player_list)
 			var/mob/living/carbon/human/new_player_human = new_player_mob.new_character
 			if(new_player_human)
-				to_chat(new_player_mob, span_notice("Captainship not forced on anyone."))
+				to_chat(new_player_mob, span_notice("Aucun capitaine n'était disponible pour diriger cette station. \
+					Les responsables des départements doivent organiser une élection pour désigner un capitaine remplaçant.  \
+					Le nouveau capitaine élu devra demander les codes de secours via la console de communication.  \
+					En cas d'arrivée d'un capitaine mandaté par CentCom, le capitaine remplaçant devra se démettre de ses fonctions.")) // EXOSTATION EDIT CHANGE : FR_TRADUCTIONS
 			CHECK_TICK
 
 
