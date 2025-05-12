@@ -20,3 +20,6 @@
   - rscadd: Ajout des holomaps, image holographique de la station affichable grâce
       au PDA. (Adaptation de NSV13)
   - qol: Les holomaps indiquent les escaliers, les ascenseurs et les échelles.
+2025-05-07:
+  Thravalgur:
+  - rscadd: ' Ajout de commandes verbales pour Poly'
