@@ -6,7 +6,12 @@
 /datum/keybinding/admin/admin_ghost
 	hotkey_keys = list("F5")
 	full_name = "Mode fantôme (Aghost)"
-	description = "Passer en mode fantôme"
+	description = "Passer en mode fantôme admin"
+
+/datum/keybinding/admin/jump_to_ghost
+	hotkey_keys = list("F4")
+	full_name = "Jump to Aghost"
+	description = "Jump your body to your Aghost"
 
 /datum/keybinding/admin/player_panel_new
 	hotkey_keys = list("F6")
@@ -34,12 +39,12 @@
 	description = "Allows you to send a message to dead chat"
 
 /datum/keybinding/admin/deadmin
-	hotkey_keys = list("Unbound")
+	hotkey_keys = list(UNBOUND_KEY)
 	full_name = "Dés-admin(Deadmin)"
 	description = "Retirer vos pouvoirs d'admin"
 
 /datum/keybinding/admin/readmin
-	hotkey_keys = list("Unbound")
+	hotkey_keys = list(UNBOUND_KEY)
 	full_name = "Ré-admin(Readmin)"
 	description = "Retrouver vos pouvoirs d'admin"
 

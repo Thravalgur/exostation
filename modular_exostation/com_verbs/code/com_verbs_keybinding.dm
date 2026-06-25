@@ -1,7 +1,7 @@
 /datum/keybinding/client/communication/looc
 	hotkey_keys = list("L")
 	name = LOOC_CHANNEL
-	full_name = "Local OOC (LOOC)"
+	full_name = "Local OOC (Hors jeu)"
 	keybind_signal = COMSIG_KB_CLIENT_LOOC_DOWN
 
 /datum/keybinding/client/communication/looc/down(client/user)
@@ -14,7 +14,7 @@
 /datum/keybinding/client/communication/whisper
 	hotkey_keys = list("U")
 	name = WHIS_CHANNEL
-	full_name = "Murmure local (Whis) (IC)"
+	full_name = "Murmure (Whis) (En jeu)"
 	keybind_signal = COMSIG_KB_CLIENT_WHISPER_DOWN
 
 /datum/keybinding/client/communication/whisper/down(client/user)
