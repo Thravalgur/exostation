@@ -164,7 +164,7 @@ EXOSTATION EDIT REMOVAL END */
 		resource_panels += page_holder.give_screen_object(new /atom/movable/screen/escape_menu/lobby_button/small/collapsible(
 			null,
 			/* hud_owner = */ null,
-			"Notre Wiki",
+			"Notre Wiki", // EXOSTATION EDIT CHANGE - TRADUCTION : Original
 			"Voir le wiki du jeu", // EXOSTATION EDIT CHANGE - TRADUCTION : Original
 			/* button_screen_loc */ "BOTTOM:30,RIGHT:-20",
 			CALLBACK(client, TYPE_VERB_REF(/client, wiki)),
@@ -179,7 +179,7 @@ EXOSTATION EDIT REMOVAL END */
 			null,
 			/* hud_owner = */ null,
 			"Config",
-			"View the server configuration files",
+			"Voir les fichiers de la configuration du serveur", // EXOSTATION EDIT CHANGE - TRADUCTION : Original "View the server configuration files"
 			/* button_screen_loc */ "BOTTOM:30,RIGHT:-20",
 			CALLBACK(client, TYPE_VERB_REF(/client, config)),
 			/* button_overlay = */ "config",
