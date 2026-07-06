@@ -110,7 +110,7 @@
 
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
-	name = "View Character Setup"
+	name = "Voir les options de configuration des personnages"  // EXOSTATION EDIT CHANGE - TRADUCTION : Original "View Character Setup"
 	screen_loc = "TOP:-70,CENTER:-54"
 	icon = 'icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup_disabled"
@@ -147,7 +147,7 @@
 
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
-	name = "Toggle Readiness"
+	name = "Prêt à commencer la partie avec le personnage sélectionné ?" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "Toggle Readiness"
 	screen_loc = "TOP:-8,CENTER:-65"
 	icon = 'icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
@@ -196,7 +196,7 @@
 
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
-	name = "Join Game"
+	name = "Rejoindre la partie en cours" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "Join Game"
 	screen_loc = "TOP:-13,CENTER:-58"
 	icon = 'icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
@@ -270,7 +270,7 @@
 	RegisterSignal(SSticker, COMSIG_TICKER_ENTER_SETTING_UP, PROC_REF(show_join_button))
 
 /atom/movable/screen/lobby/button/observe
-	name = "Observe"
+	name = "Observer" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "Observe"
 	screen_loc = "TOP:-40,CENTER:-54"
 	icon = 'icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
@@ -304,7 +304,7 @@
 	icon = 'icons/hud/lobby/bottom_buttons.dmi'
 
 /atom/movable/screen/lobby/button/bottom/settings
-	name = "View Game Preferences"
+	name = "Voir les préférences du jeu" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "View Game Preferences"
 	icon_state = "settings_disabled"
 	base_icon_state = "settings"
 	screen_loc = "TOP:-122,CENTER:+29"
@@ -337,7 +337,7 @@
 	UnregisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE)
 
 /atom/movable/screen/lobby/button/bottom/changelog_button
-	name = "View Changelog"
+	name = "Voir le changelog" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "View Changelog"
 	icon_state = "changelog"
 	base_icon_state = "changelog"
 	screen_loc ="TOP:-122,CENTER:+57"
@@ -347,7 +347,7 @@
 	usr.client?.changelog()
 
 /atom/movable/screen/lobby/button/bottom/crew_manifest
-	name = "View Crew Manifest"
+	name = "Voir le manifeste de l'équipage" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "View Crew Manifest"
 	icon_state = "crew_manifest"
 	base_icon_state = "crew_manifest"
 	screen_loc = "TOP:-122,CENTER:+2"
@@ -360,7 +360,7 @@
 	new_player.ViewManifest()
 
 /atom/movable/screen/lobby/button/bottom/poll
-	name = "View Available Polls"
+	name = "Voir les sondages en cours" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "View Available Polls"
 	icon_state = "poll"
 	base_icon_state = "poll"
 	screen_loc = "TOP:-122,CENTER:-26"
@@ -441,7 +441,7 @@
 	closeToolTip(usr)
 
 /atom/movable/screen/lobby/button/collapse
-	name = "Collapse Lobby Menu"
+	name = "Réduire le menu de démarrage" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "Collapse Lobby Menu"
 	icon = 'icons/hud/lobby/collapse_expand.dmi'
 	icon_state = "collapse"
 	base_icon_state = "collapse"
@@ -479,7 +479,7 @@
 		return
 	var/datum/hud/new_player/our_hud = hud
 	base_icon_state = our_hud.menu_hud_status ? "expand" : "collapse"
-	name = "[our_hud.menu_hud_status ? "Expand" : "Collapse"] Lobby Menu"
+	name = "[our_hud.menu_hud_status ? "Développer" : "Réduire"] le menu de démarrage" // EXOSTATION EDIT CHANGE - TRADUCTION : Original  "[our_hud.menu_hud_status ? "Expand" : "Collapse"] Lobby Menu"
 	set_button_status(FALSE)
 
 	//get the shutter object used by our hud
@@ -584,14 +584,14 @@
 	SEND_SOUND(hud.mymob, sound('sound/effects/cartoon_sfx/cartoon_splat.ogg', volume = 50))
 	SSticker.start_immediately = TRUE
 	if(SSticker.current_state == GAME_STATE_STARTUP)
-		to_chat(usr, span_admin("The server is still setting up, but the round will be started as soon as possible."))
+		to_chat(usr, span_admin ("Le serveur est toujours en préparation, mais la partie commencera aussitôt que possible.")) // EXOSTATION EDIT CHANGE - TRADUCTION : Original ("The server is still setting up, but the round will be started as soon as possible."))
 
 #define OVERLAY_X_DIFF 12
 #define OVERLAY_Y_DIFF 5
 
 ///Lobby screen that appears before the game has started showing how many players there are and who is ready.
 /atom/movable/screen/lobby/new_player_info
-	name = "New Player Info"
+	name = "Infos sur les joueurs" // EXOSTATION EDIT CHANGE - TRADUCTION : Original  "New Player Info"
 	screen_loc = "EAST-3,CENTER:140"
 	icon = 'icons/hud/lobby/newplayer.dmi'
 	icon_state = null //we only show up when we get update appearance called, cause we need our overlay to not look bad.
@@ -634,7 +634,7 @@
 	. = ..()
 	if(QDELETED(src) || isnull(job_overlay))
 		return
-	openToolTip(usr, src, params, title = "[SSjob.overflow_role::title] overflow", content = "The overflow for the round has been set as [SSjob.overflow_role::title].")
+	openToolTip(usr, src, params, title = "Surplus de [SSjob.overflow_role::title]", content = "Le rôle en surplus pour la partie a été définie sur [SSjob.overflow_role::title].") // EXOSTATION EDIT CHANGE - TRADUCTION : Original title = "[SSjob.overflow_role::title] overflow", content = "The overflow for the round has been set as [SSjob.overflow_role::title].")
 
 /atom/movable/screen/lobby/new_player_info/MouseExited()
 	closeToolTip(usr)
@@ -683,29 +683,48 @@
 
 	var/round_started = SSticker.HasRoundStarted()
 	if(!MC_RUNNING())
-		maptext = MAPTEXT("<span style='text-align: center; vertical-align: middle'>[(round_started ? null : "Starting in [time_remaining_str()]<br />")]Loading...</span>")
+		maptext = MAPTEXT("<span style='text-align: center; vertical-align: middle'>[(round_started ? null : "Début dans [time_remaining_str()]<br />")]Chargement...</span>") // EXOSTATION EDIT CHANGE - TRADUCTION : Original  ("<span style='text-align: center; vertical-align: middle'>[(round_started ? null : "Starting in [time_remaining_str()]<br />")]Loading...</span>")
 		return
 
 	if(SSticker.IsPostgame())
-		maptext = MAPTEXT("<span style='text-align: center; vertical-align: middle'>Game ended, <br /> \
+		/** EXOSTATION EDIT CHANGE START - TRADUCTION : Original maptext =  MAPTEXT("<span style='text-align: center; vertical-align: middle'>Game ended, <br /> \
 			restart soon</span>")
+		*/
+		maptext =  MAPTEXT("<span style='text-align: center; vertical-align: middle'>Partie terminée, <br /> \
+			redémarrage</span>")
+		// EXOSTATION EDIT CHANGE END - TRADUCTION
 		return
 
 	var/new_maptext
 	if(round_started)
-		new_maptext = "<span style='text-align: center; vertical-align: middle'>[SSmapping.current_map.map_name]<br /> \
+		/** EXOSTATION EDIT CHANGE START - TRADUCTION : Original new_maptext = "<span style='text-align: center; vertical-align: middle'>[SSmapping.current_map.map_name]<br /> \
 			[LAZYLEN(GLOB.clients)] player\s online<br /> \
 			[round_timestamp()] in<br />"
+		*/
+		new_maptext = "<span style='text-align: center; vertical-align: middle'>[SSmapping.current_map.map_name]<br /> \
+			[LAZYLEN(GLOB.clients)] joueur\s en ligne<br /> \
+			En cours depuis [round_timestamp()]<br />"
+		// EXOSTATION EDIT CHANGE END - TRADUCTION
 		new_maptext += "</span>"
 	else
 		if(hud.mymob.client?.holder)
-			new_maptext = "<span style='text-align: center; vertical-align: middle'>Starting in [time_remaining_str()]<br /> \
+		/** EXOSTATION EDIT CHANGE START - TRADUCTION : Original 	new_maptext = "<span style='text-align: center; vertical-align: middle'>Starting in [time_remaining_str()]<br /> \
 				[LAZYLEN(GLOB.clients)] player\s<br /> \
 				[SSticker.totalPlayersReady] players ready<br /> \
 				[SSticker.total_admins_ready] / [length(GLOB.admins)] admins ready</span>"
+		*/
+			new_maptext = "<span style='text-align: center; vertical-align: middle'>Début dans [time_remaining_str()]<br /> \
+				[LAZYLEN(GLOB.clients)] joueur\s<br /> \
+				[SSticker.totalPlayersReady] prêts<br /> \
+				[SSticker.total_admins_ready] / [length(GLOB.admins)] admins prêts</span>"
+		// EXOSTATION EDIT CHANGE END - TRADUCTION
 		else
-			new_maptext = "<span style='text-align: center; vertical-align: middle; font-size: 18px'>[time_remaining_str()]</span><br /> \
+		/** EXOSTATION EDIT CHANGE START - TRADUCTION : Original 	new_maptext = "<span style='text-align: center; vertical-align: middle; font-size: 18px'>[time_remaining_str()]</span><br /> \
 				<span style='text-align: center; vertical-align: middle'>[LAZYLEN(GLOB.clients)] player\s</span>"
+		*/
+			new_maptext = "<span style='text-align: center; vertical-align: middle; font-size: 18px'>[time_remaining_str()]</span><br /> \
+				<span style='text-align: center; vertical-align: middle'>[LAZYLEN(GLOB.clients)] joueur\s</span>"
+		// EXOSTATION EDIT CHANGE END - TRADUCTION
 
 	maptext = MAPTEXT(new_maptext)
 
@@ -714,8 +733,8 @@
 	if(time_remaining > 0)
 		return "[round(time_remaining/10)]s"
 	if(time_remaining == -10)
-		return "DELAYED"
-	return "SOON"
+		return "DIFFERE"// EXOSTATION EDIT CHANGE - TRADUCTION : Original  "DELAYED"
+	return "IMMINENT"// EXOSTATION EDIT CHANGE - TRADUCTION : Original "SOON"
 
 #undef OVERLAY_X_DIFF
 #undef OVERLAY_Y_DIFF
