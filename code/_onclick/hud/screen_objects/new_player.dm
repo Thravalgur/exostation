@@ -147,7 +147,7 @@
 
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
-	name = "Prêt à commencer la partie avec le personnage sélectionné ?" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "Toggle Readiness"
+	name = "Prêt à commencer la partie ?" // EXOSTATION EDIT CHANGE - TRADUCTION : Original "Toggle Readiness"
 	screen_loc = "TOP:-8,CENTER:-65"
 	icon = 'icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
